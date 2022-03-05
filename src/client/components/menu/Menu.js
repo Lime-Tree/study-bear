@@ -6,8 +6,6 @@ import './Menu.css';
 
 const songs = [
   'https://archive.org/download/LazyDays/Dancing%20Days-225516546.mp3',
-  'https://archive.org/download/LazyDays/Euphoria%20%28summer%20vibes%29-220464909.mp3',
-  'https://archive.org/download/LazyDays/Feelinlonely-256845327.mp3',
   'https://archive.org/download/LazyDays/Just%20that.-285534785.mp3',
   'https://archive.org/download/LazyDays/Look%20%40%20me-250100913.mp3',
   'https://archive.org/download/LazyDays/See%20ya...-284566004.mp3',
@@ -56,6 +54,8 @@ const Menu = () => {
   const socket = useContext(SocketContext);
 
   const onBack = () => {
+    currentAudio.fastSeek(0);
+    currentAudio.pause();
     socket.emit('byeBear');
     navigate('/');
   };

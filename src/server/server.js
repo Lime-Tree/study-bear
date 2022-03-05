@@ -128,8 +128,8 @@ io.on('connection', (socket) => {
     const bears = rooms[connectionRoomKey]?.bears;
     const bearEvent = byeBear(bears, connectionBearKey);
     if (bearEvent) {
+      console.log(socket.rooms);
       for (const socketRoomId in socket.rooms) {
-        console.log(socketRoomId);
         if (socket.id !== socketRoomId) {
           socket.leave(socketRoomId);
         }
