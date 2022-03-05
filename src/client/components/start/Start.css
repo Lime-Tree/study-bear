@@ -1,0 +1,29 @@
+.start {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start ion-icon {
+  padding: 128px;
+  font-size: 128px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  color: #ad6f60;
+  animation: bounce 2s infinite;
+}
+
+.start ion-icon:hover {
+  font-size: 192px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-7%);
+  }
+}

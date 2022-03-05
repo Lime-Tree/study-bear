@@ -1,0 +1,33 @@
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vh;
+  color: #ad6f60;
+  animation: fade 3s;
+}
+
+.prompt {
+  padding-bottom: 10%;
+}
+
+input {
+  text-align: center;
+  color: #ad6f60;
+  font-size: 10vh;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #ad6f60;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

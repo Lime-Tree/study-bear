@@ -1,0 +1,53 @@
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.container img {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: slide 1.5s, room 4s infinite 1.5s;
+}
+
+@keyframes room {
+  50% {
+    transform: scaleY(1.02) scaleX(1.01);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.buttons .right {
+  position: absolute;
+  right: 5vw;
+  top: 5vh;
+  z-index: 30;
+}
+
+.buttons .left {
+  position: absolute;
+  right: 80vw;
+  top: 5vh;
+  z-index: 30;
+}
+
+.buttons ion-icon {
+  color: #3f322b;
+  font-size: 96px;
+  padding: 32px;
+  cursor: pointer;
+}

@@ -1,0 +1,34 @@
+.bear1 {
+  animation: shrink 1s;
+  transform-origin: 24% 64.5%;
+}
+
+@keyframes shrink {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+.button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 0;
+  background-color: red;
+}
+
+.join {
+  animation: grow 1s;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
