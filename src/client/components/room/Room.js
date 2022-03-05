@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Bears from '../bears/Bears.js';
+import Menu from '../menu/Menu.js';
 import { SocketContext } from '../../App';
 import { roomSprite } from '../../util/sprites';
 import './Room.css';
@@ -18,6 +18,7 @@ const Room = ({ bearProps }) => {
   return (
     <div className="screen">
       <div className="container">
+        <Menu />
         <img className={'room'} src={roomSprite} alt="room" />
         <Bears bears={bears} />
       </div>

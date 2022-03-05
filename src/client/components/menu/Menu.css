@@ -1,0 +1,28 @@
+.overlay ion-icon {
+  font-size: 10vh;
+  cursor: pointer;
+  color: #3f322b;
+  margin-top: 2vh;
+}
+
+.overlay ion-icon:hover {
+  font-size: 12vh;
+}
+
+.back {
+  position: absolute;
+  left: 70%;
+  z-index: 10;
+}
+
+.share {
+  position: absolute;
+  left: 80%;
+  z-index: 10;
+}
+
+.mute {
+  position: absolute;
+  left: 90%;
+  z-index: 10;
+}
