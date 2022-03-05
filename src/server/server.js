@@ -47,7 +47,7 @@ const hiBear = (bears, bearKey) => {
 };
 
 const byeBear = (bears, bearKey) => {
-  if (bears && bearKey) {
+  if (bears && bearKey >= 0) {
     bears[bearKey] = null;
     return bears;
   }
@@ -99,12 +99,6 @@ io.on('connection', (socket) => {
       }
     }
 
-    for (const socketRoomId in socket.rooms) {
-      if (socket.id !== socketRoomId) {
-        socket.leave(socketRoomId);
-      }
-    }
-
     socket.join(connectionRoomKey);
     socket.emit('bears', bears);
     socket
@@ -125,6 +119,21 @@ io.on('connection', (socket) => {
     const bears = rooms[connectionRoomKey]?.bears;
     const bearEvent = byeBear(bears, connectionBearKey);
     if (bearEvent) {
+      socket.to(connectionRoomKey).emit('bearEvent', bearEvent);
+    }
+  });
+
+  socket.on('byeBear', () => {
+    console.log('received byeBear');
+    const bears = rooms[connectionRoomKey]?.bears;
+    const bearEvent = byeBear(bears, connectionBearKey);
+    if (bearEvent) {
+      for (const socketRoomId in socket.rooms) {
+        console.log(socketRoomId);
+        if (socket.id !== socketRoomId) {
+          socket.leave(socketRoomId);
+        }
+      }
       socket.to(connectionRoomKey).emit('bearEvent', bearEvent);
     }
   });
