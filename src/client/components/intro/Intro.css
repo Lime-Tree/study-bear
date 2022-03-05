@@ -7,6 +7,7 @@
   font-size: 10vh;
   color: #ad6f60;
   animation: fade 3s;
+  cursor: none;
 }
 
 .prompt {
@@ -14,13 +15,14 @@
 }
 
 input {
+  cursor: none;
   text-align: center;
   color: #ad6f60;
   font-size: 10vh;
   border: 0;
   outline: 0;
   background: transparent;
-  border-bottom: 1px solid #ad6f60;
+  border-bottom: 1vh solid #ad6f60;
 }
 
 @keyframes fade {

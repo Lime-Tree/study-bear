@@ -1,0 +1,27 @@
+.card {
+  color: #ad6f60;
+  position: absolute;
+  width: calc(100vh * 0.4);
+  height: calc(100vh * 0.2);
+  left: 0%;
+  top: 0%;
+  animation: bounce 2s infinite;
+}
+
+.name {
+  font-size: 6vh;
+}
+
+.task {
+  overflow-wrap: break-word;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(7%);
+  }
+}

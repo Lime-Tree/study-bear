@@ -36,11 +36,15 @@ const Intro = () => {
     };
   };
 
+  const onMouseDown = (event) => {
+    event.preventDefault();
+  };
+
   return (
-    <div>
+    <div onMouseDown={onMouseDown}>
       {!bears && phase === 0 && (
         <div className="intro">
-          <div className="prompt">What's your name?</div>
+          <div className="prompt">My name is</div>
           <input
             onKeyPress={onKeyPress}
             onChange={getOnChange(setName)}
@@ -53,7 +57,7 @@ const Intro = () => {
       )}
       {!bears && phase === 1 && (
         <div className="intro">
-          <div className="prompt">What are you working on?</div>
+          <div className="prompt">I'm currently</div>
           <input
             onKeyPress={onKeyPress}
             onChange={getOnChange(setTask)}

@@ -1,6 +1,8 @@
 .container {
   position: relative;
   height: 100vh;
+  max-width: calc(100vh * 1.082);
+  margin: auto;
 }
 
 .container img {
@@ -10,7 +12,8 @@
   left: 0;
   right: 0;
   margin: auto;
-  animation: slide 1.5s, room 4s infinite 1.5s;
+  animation: fade 2s, room 4s infinite 1.5s;
+  max-width: 100%;
 }
 
 @keyframes room {
@@ -22,12 +25,12 @@
   }
 }
 
-@keyframes slide {
+@keyframes fade {
   0% {
-    transform: translateY(100%);
+    opacity: 0%;
   }
   100% {
-    transform: translateY(0%);
+    opacity: 100%;
   }
 }
 
