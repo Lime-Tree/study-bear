@@ -45,7 +45,6 @@ const Menu = () => {
   const socket = useContext(SocketContext);
 
   const onBack = () => {
-    currentAudio.fastSeek(0);
     currentAudio.pause();
     socket.emit('byeBear');
     navigate('/');
@@ -57,7 +56,6 @@ const Menu = () => {
   };
 
   const onSound = () => {
-    console.log(currentAudio);
     if (isMuted) {
       currentAudio.muted = false;
       if (!isPlaying) {
