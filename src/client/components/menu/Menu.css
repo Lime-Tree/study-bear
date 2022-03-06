@@ -10,21 +10,21 @@
 
 .back {
   position: absolute;
-  left: -10%;
+  left: -30%;
   top: 82%;
   z-index: 10;
 }
 
 .share {
   position: absolute;
-  left: 2%;
+  left: -20%;
   top: 82%;
   z-index: 10;
 }
 
 .mute {
   position: absolute;
-  left: 15%;
+  left: -10%;
   top: 82%;
   z-index: 10;
 }
