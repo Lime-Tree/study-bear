@@ -3,6 +3,21 @@ import { SocketContext } from '../../App';
 import Room from '../room/Room';
 import './Intro.css';
 
+const encouragements = [
+  'Keep it up!',
+  'Hang in there!',
+  'Stay strong!',
+  'Keep pushing!',
+  'Almost there!',
+  'You can do it!',
+  "You're awesome!",
+  'Believe in yourself!',
+  'Keep up the good work!',
+  'Great work!',
+  'Be proud of yourself!',
+  "You're doing great!",
+];
+
 const Intro = () => {
   const socket = useContext(SocketContext);
   const [phase, setPhase] = useState(0);
@@ -28,6 +43,11 @@ const Intro = () => {
         setPhase(phase + 1);
       }
     }
+  };
+
+  const getEncouragement = () => {
+    const index = Math.floor(Math.random() * words.length);
+    return encouragements[index];
   };
 
   const getOnChange = (setter) => {
@@ -68,7 +88,9 @@ const Intro = () => {
           ></input>
         </div>
       )}
-      {!bears && phase === 2 && <div className="intro">Good luck!</div>}
+      {!bears && phase === 2 && (
+        <div className="intro">{getEncouragement()}</div>
+      )}
       {bears && <Room bearProps={bears} />}
     </div>
   );
