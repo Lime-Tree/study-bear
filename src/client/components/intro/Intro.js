@@ -3,26 +3,27 @@ import { SocketContext } from '../../App';
 import Room from '../room/Room';
 import './Intro.css';
 
+const words = [
+  'Keep it up!',
+  'Hang in there!',
+  'Stay strong!',
+  'Keep pushing!',
+  'Almost there!',
+  'You can do it!',
+  "You're awesome!",
+  'Believe in yourself!',
+  'Keep up the good work!',
+  'Great work!',
+  'Be proud of yourself!',
+  "You're doing great!",
+];
+
 const Intro = () => {
   const socket = useContext(SocketContext);
   const [phase, setPhase] = useState(0);
   const [name, setName] = useState('');
   const [task, setTask] = useState('');
   const [bears, setBears] = useState();
-  const words = [
-    'Keep it up!',
-    'Hang in there!',
-    'Stay strong!',
-    'Keep pushing!',
-    'Almost there!',
-    'You can do it!',
-    "You're awesome!",
-    'Believe in yourself!',
-    'Keep up the good work!',
-    'Great work!',
-    'Be proud of yourself!',
-    "You're doing great!",
-  ];
 
   useEffect(() => {
     socket.on('bears', (bears) => {
