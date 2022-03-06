@@ -47,7 +47,7 @@ const Intro = () => {
 
   const getEncouragement = () => {
     const index = Math.floor(Math.random() * words.length);
-    return words[index];
+    return encouragements[index];
   };
 
   const getOnChange = (setter) => {
