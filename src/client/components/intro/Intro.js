@@ -46,7 +46,7 @@ const Intro = () => {
   };
 
   const getEncouragement = () => {
-    const index = Math.floor(Math.random() * words.length);
+    const index = Math.floor(Math.random() * encouragements.length);
     return encouragements[index];
   };
 
