@@ -1,11 +1,11 @@
-.start {
+.start-buttons {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.start ion-icon {
+.start-buttons ion-icon {
   padding: 128px;
   font-size: 128px;
   transition: all 0.5s ease;
@@ -14,7 +14,7 @@
   animation: fade 2s, bounce 2s infinite;
 }
 
-.start ion-icon:hover {
+.start-buttons ion-icon:hover {
   font-size: 192px;
 }
 
@@ -35,4 +35,25 @@
   100% {
     opacity: 100%;
   }
+}
+
+.button-info {
+  color: #ad6f60;
+  font-size: 20vh;
+}
+
+.start {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.padding {
+  font-size: 20vh;
 }
