@@ -3,7 +3,7 @@ import { SocketContext } from '../../App';
 import Room from '../room/Room';
 import './Intro.css';
 
-const words = [
+const encouragements = [
   'Keep it up!',
   'Hang in there!',
   'Stay strong!',
