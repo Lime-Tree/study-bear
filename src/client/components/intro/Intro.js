@@ -30,6 +30,26 @@ const Intro = () => {
     }
   };
 
+  const greeting = () => {
+    const words = [
+      'Keep it up!',
+      'Hang in there!',
+      'Stay strong!',
+      'Keep pushing!',
+      'Almost there!',
+      'You can do it!',
+      "You're awesome!",
+      'Believe in yourself!',
+      'Keep up the good work!',
+      'Great work!',
+      'Be proud of yourself!',
+      "You're doing great!",
+    ];
+
+    const index = Math.floor(Math.random() * words.length);
+    return words[index];
+  };
+
   const getOnChange = (setter) => {
     return (event) => {
       setter(event.target.value);
@@ -68,7 +88,7 @@ const Intro = () => {
           ></input>
         </div>
       )}
-      {!bears && phase === 2 && <div className="intro">Good luck!</div>}
+      {!bears && phase === 2 && <div className="intro">{greeting()}</div>}
       {bears && <Room bearProps={bears} />}
     </div>
   );
