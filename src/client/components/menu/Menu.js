@@ -6,25 +6,16 @@ import './Menu.css';
 
 const songs = [
   'https://archive.org/download/LazyDays/Dancing%20Days-225516546.mp3',
-  'https://archive.org/download/LazyDays/Just%20that.-285534785.mp3',
-  'https://archive.org/download/LazyDays/Look%20%40%20me-250100913.mp3',
   'https://archive.org/download/LazyDays/See%20ya...-284566004.mp3',
   'https://archive.org/download/LazyDays/TORIMICHI-212341505.mp3',
-  'https://archive.org/download/LazyDays/Time-193318601.mp3',
   'https://archive.org/download/LazyDays/Timeless-295269723.mp3',
   'https://archive.org/download/LazyDays/c%20h%20e%20r%20r%20y-202895115.mp3',
   'https://archive.org/download/LazyDays/darling-245961785.mp3',
-  'https://archive.org/download/LazyDays/don%27t%20i%20make%20it%20look%20easy-325154000.mp3',
-  'https://archive.org/download/LazyDays/exhale-292776010.mp3',
   'https://archive.org/download/LazyDays/flowerz-296630766.mp3',
-  'https://archive.org/download/LazyDays/i%20know%20where%20i%27m%20going-290878588.mp3',
-  'https://archive.org/download/LazyDays/im%20closing%20my%20eyes%20%28feat.%20shiloh%29-313534719.mp3',
-  'https://archive.org/download/LazyDays/let.go%20%5Bone%20for%20jun%5D-193124657.mp3',
   'https://archive.org/download/LazyDays/piano%20loop-272298067.mp3',
-  'https://archive.org/download/LazyDays/s%20w%20e%20e%20t%20.s%20o%20u%20-295693652.mp3',
-  'https://archive.org/download/LazyDays/uber%20to%20your%20place-313356371.mp3',
-  'https://archive.org/download/LazyDays/whats.left-272376156.mp3',
   'https://archive.org/download/LazyDays/x%20jhfly-273471368.mp3',
+  'https://ia904505.us.archive.org/3/items/lofi-wn9vy8/PZA%20-%20%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%20lofi%20-%2002%20%E3%82%AA%E3%83%A9%E3%82%AF%E3%83%AB%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%B7%E3%83%BC%E3%82%BA%E3%83%B3%E3%82%BA.mp3',
+  'https://ia804505.us.archive.org/3/items/lofi-wn9vy8/PZA%20-%20%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%20lofi%20-%2005%20%E5%B9%B4%E4%BB%A3%E3%81%AE%E3%82%AA%E3%83%A9%E3%82%AF%E3%83%AB.mp3',
 ];
 
 let audios = [];
