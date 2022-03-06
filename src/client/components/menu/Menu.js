@@ -87,9 +87,9 @@ const Menu = () => {
         </div>
         <div className="share" onClick={onShare}>
           {isShared ? (
-            <ion-icon name="share-social-sharp" />
+            <ion-icon name="clipboard-sharp" />
           ) : (
-            <ion-icon name="share-social" />
+            <ion-icon name="clipboard" />
           )}
         </div>
         <div className="mute" onClick={onSound}>
