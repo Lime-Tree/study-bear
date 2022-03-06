@@ -44,7 +44,7 @@ const Intro = () => {
     }
   };
 
-  const greeting = () => {
+  const getEncouragement = () => {
     const index = Math.floor(Math.random() * words.length);
     return words[index];
   };
@@ -87,7 +87,9 @@ const Intro = () => {
           ></input>
         </div>
       )}
-      {!bears && phase === 2 && <div className="intro">{greeting()}</div>}
+      {!bears && phase === 2 && (
+        <div className="intro">{getEncouragement()}</div>
+      )}
       {bears && <Room bearProps={bears} />}
     </div>
   );
